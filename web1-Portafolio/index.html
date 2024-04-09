@@ -3,11 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Web1-Portafolio</title>
+    
+    <!--Estilos-->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css"/>
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+
+
+    <title>Portafolio - Richard Pereira</title>
 
 </head>
 <body>
-    <h1>Portafolio</h1>
+    
+    <!--Layout Principal-->
+    <div class="layout">
+        <!--1.- Barra lateral (info Usuario)-->
+        <aside class="layout__aside">
+            <section class="aside__userInfo">
+
+                <!--Informacion General-->
+                <div class="userInfo__general">
+                    <div class="userInfo__containerImagen">
+                        <img class="userInfo__imagen" src="assets/img/default-user.jpg" alt="Foto de Perfil del Usuario">
+                    </div>
+
+                    <h2 class="userInfo__name">Richard Pereira</h2>
+                    <h4 class="userInfo__job">Desarrollador web</h4>
+                </div>
+
+                <!--Menú de navegación-->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+
+                        <!--1er Opcion - Principal-->
+                        <li class="menu__option">
+                            <a href="index.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Home</span>
+                            </a>
+                        </li>
+                        <!--2da Opcion - Sobre Mí-->
+                        <li class="menu__option">
+                            <a href="sobreMi.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">Sobre mí</span>
+                            </a>
+                        </li>
+                        <!--3ra Opcion - Estudios-->
+                        <li class="menu__option">
+                            <a href="estudios.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Estudios</span>
+                            </a>
+                        </li>
+                        <!--4ta Opcion - Portafolio-->
+                        <li class="menu__option">
+                            <a href="portafolio.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
+                        <!--5ra Opcion - Bloq-->
+                        <li class="menu__option">
+                            <a href="bloq.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-book "></i>
+                                <span class="menu__overlay">Bloq</span>
+                            </a>
+                        </li>
+                        <!--6ta Opcion - Contacto-->
+                        <li class="menu__option">
+                            <a href="contacto.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-envelope "></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!--Links a redes sociales-->
+                <div class="userInfo__links">
+                    <ul class="links__social">
+                        
+                        <!-- Link a Youtube-->
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <!-- Link a Linkedin-->
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <!-- Link a Instagram-->
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Boton del curriculum-->
+                <div class="userInfo__buttons">
+                    <a href="#" class="userInfo__btn">Descargar CV</a>
+                </div>
+                <!--Pie de Pagina-->
+                <footer class="userInfo__footer">
+                    &copy; 2024 Richard Pereira WEB
+                </footer>
+            </section>
+        </aside>
+
+        <!--2.- Contenido Principal-->
+        <main class="layout__content">
+            <section class="content__page">
+                <h1 class="page__name">Richard Pereira</h1>
+                <h2 class="page__job">Desarrollador web</h2>
+            </section>
+        </main>
+    </div>
+
+    
+
 </body>
 </html>
