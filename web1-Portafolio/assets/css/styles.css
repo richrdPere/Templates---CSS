@@ -10,6 +10,9 @@
     --colorTitle: #222222;
     --colorSubtitle: #888;
     --colorText: #555;
+
+    --colorBorderReviews: #E5E6E7;
+    --colorCompany: #A5A6A7;
 }
 /*ESTILOS GENERALES*/
 html{
@@ -219,12 +222,14 @@ body{
     width: 100%;
     text-align: center;
 }
+
 .menu__icon {
     color: var(--colorIcon);
     font-size: 2.8rem;
     transition: all 300ms ease-in-out;
 }
-.menu__option:hover .menu__icon{
+.menu__option:hover .menu__icon,
+.menu__link--active .menu__icon{
     color: var(--colorSecondary);
     
 }
@@ -250,9 +255,9 @@ body{
 
 }
 
-
-/*SOBRE MÍ*/
-.content__about{
+/*ESTILOS GENERALES (SOBRE MÍ Y OTRAS PAGINAS)*/
+.content__about,
+.content__resume{
     display: block;
 
     height: 100%;
@@ -261,3 +266,336 @@ body{
     padding-right: 3rem;
     overflow: auto;   
 }
+.about__header,
+.resume__header{
+    display: inline-block;
+    margin-bottom: 4.5rem;
+}
+.about__title,
+.resume__title{
+    font-size: 3.2rem;
+    position: relative;
+}
+.about__title::after,
+.resume__title::after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -25px;
+
+    width: 50px;
+    height: 30px;
+    background-image: -webkit-repeating-radial-gradient(center center, var(--colorSecondary), var(--colorSecondary) 1px, transparent 0px, transparent 100%);
+    background-size: 6px 6px;
+    opacity: 0.5;
+}
+.title__color{
+    color: var(--colorSecondary);
+}
+
+/*INFORMACIÓN PERSONAL*/
+.about__personalInfo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.personalInfo__bio{
+    flex-basis: 56%;
+}
+.personalInfo__description{
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+}
+.personalInfo__data{
+    flex-basis: 44%;
+    padding: 0 1.5rem;
+}
+.personalInfo__option{
+    margin-bottom: 1rem;
+}
+.personalInfo__title{
+    margin-right: 0.5rem;
+    color: var(--colorSecondary);
+    font-weight: 600;
+}
+
+/*ESTILOS COMPARTIDOS*/
+.about__services,
+.about__reviews,
+.about__clients,
+.about__prices,
+.about__extra{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.services__header,
+.reviews__header,
+.clients__header,
+.prices__header,
+.extra__header{
+    display: inline-block;
+    padding-right: 1.2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+.services__title,
+.reviews__title,
+.clients__title,
+.prices__title,
+.extra__title{
+    font-size: 2.1rem;
+}
+.services__title::after,
+.reviews__title::after,
+.clients__title::after,
+.prices__title::after,
+.extra__title::after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0px;
+
+    width: 30px;
+    height: 20px;
+    background-image: -webkit-repeating-radial-gradient(center center, var(--colorSecondary), var(--colorSecondary) 1px, transparent 0px, transparent 100%);
+    background-size: 6px 6px;
+    opacity: 0.5;
+}
+/*MAQUETANDO LOS SERVICIOS*/
+.services__container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.services__service{
+    flex-basis: calc(50% - 3rem);
+    margin-right: 3rem;
+    margin-bottom: 2.5rem;
+}
+.service__icon .service__realIcon{
+    color: var(--colorSecondary);
+    font-size: 3.8rem;
+}
+.service__title{
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+}
+.service__description{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+/*MAQUETANDO LAS REVIEWS*/
+.reviews__container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.reviews__review{
+    flex-basis: calc(50% - 2.5rem);
+
+    border: 2px solid var(--colorBorderReviews);
+    border-radius: 2rem;
+    /* padding-top: 0;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    padding-bottom: 1.5rem; */
+
+    padding: 0.5rem 2.5rem 2.5rem 2.5rem;
+    margin-right: 2.5rem;
+    margin-top: 4.5rem;
+    margin-bottom: 1rem;
+}
+.review__imageContainer{
+    width: 100%;
+}
+.review__image{
+    max-width: 9rem;
+    max-height: 9rem;
+    border-radius: 9rem;
+    margin: 0 auto;
+    margin-top: -4.5rem;
+    margin-bottom: 2rem;
+
+    box-shadow: 0px 10px 10px -8px rgba(0,0,0,0.22);
+}
+.review__description {
+    margin-bottom: 1rem;
+}
+.review__text{
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    text-align: justify;
+}
+.review__author{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.review__name{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+.review__company{
+    color: var(--colorCompany);
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.review__icon {
+    font-size: 4rem;
+    opacity: 0.5;
+    color: var(--colorSecondary);
+}
+
+/*MAQUETANDO LOS CLIENTS*/
+.about__clients{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.clients__header{
+    margin-bottom: 3rem;
+}
+.clients__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.clients__link{
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    transition: all 300ms linear;
+}
+.clients__link:hover{
+    opacity: 1;
+}
+.clients__image{
+    width: 145px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/*MAQUETANDO LOS PRECIOS*/
+.prices_container{
+    margin-bottom: 5rem;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.prices__box{
+    flex-basis: 50%;
+    height: 100%;
+    margin-right: 3rem;
+    padding: 3rem;
+    border: 2px solid var(--colorBorderReviews);
+
+    border-radius: 1.5rem;   
+    text-align: center;
+    transition: all 300ms ease-in-out;
+}
+.prices__box:last-of-type{
+    margin-right: 0rem;
+}
+.prices__box:hover,
+.extra__info:hover{
+    box-shadow: 0 18px 24px -5px rgba(0 ,0 ,0 ,0.15);
+    transform: translateY(-1rem);
+}
+.prices__subtitle{
+    margin-bottom: 3rem;
+}
+.prices__text{
+    position: relative;
+    display: inline-block;
+}
+.prices__box:hover .prices__text::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.3rem;
+    height: 0.2rem;
+    background-color: var(--colorSecondary);
+}
+.prices__price{
+    padding-bottom: 1rem;
+}
+.prices__number{
+    display: block;
+    font-size: 4.2rem;
+    line-height: 1;
+    color: var(--colorTitle);
+}
+.prices__advice{
+    display: block;
+    color: var(--colorSubtitle);
+}
+.prices__buy{
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+.prices__btn{
+    display: inline-block;
+    padding: 1.2rem 3.1rem;
+    border:2px solid var(--colorBorderReviews);
+    box-shadow: 0 10px 10px -8px var(--colorBorderReviews);
+    border-radius: 3rem;
+    transition: all 300ms ease-in-out;
+}
+.prices__btn:hover{
+    border: 2px solid var(--colorSecondary);
+    background-color: var(--colorSecondary);
+    color: var(--colorPrincipal);
+    font-weight: bold;
+}
+.prices__reward{
+    font-size: 1.4rem;
+    padding: 0.6rem 0;
+}
+
+/*MAQUETANDO INFORMACIÓN EXTRA*/
+.extra__container{
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.extra__info{
+    flex-basis: 30%;
+    padding: 2.5rem 1rem;
+    border: 2px solid var(--colorBorderReviews);
+    
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+}
+.extra__info:hover{
+    transform: translateY(-0.5rem);
+}
+.extra__icon{
+    font-size: 3.3rem;
+    color: var(--colorSecondary);
+    margin-bottom: 1rem;    
+}
+.extra__title{
+    font-size: 1.5rem;
+    margin: 1.5rem;
+}
+.extra__quantity{
+    display: block;
+    margin: 1.5rem 0;
+    margin-bottom: 0;
+    font-size: 3.6rem;
+    line-height: 5rem;
+    color: var(--colorSubtitle);
+}
+
+/**/
