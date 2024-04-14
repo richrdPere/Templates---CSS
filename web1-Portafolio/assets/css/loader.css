@@ -1,0 +1,71 @@
+/*DEFINICION DE VARIABLES*/
+:root{
+    --colorPrincipal: #FFFFFF;
+    --colorSecondary: #04B4E0;
+
+    --colorBackground: #F2F7F9;
+    --colorTransparent: transparent;
+
+    --colorIcon: #B5B6B7;
+    --colorTitle: #222222;
+    --colorSubtitle: #888;
+    --colorText: #555;
+
+    --colorBorderReviews: #E5E6E7;
+    --colorCompany: #A5A6A7;
+
+    --colorBackgroundCertificate: #f5f5f5;
+    --colorBackgroundContact: #fcfcfc;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+    margin: 0 auto;
+    margin-top: 2.5rem;
+
+    width: 45px;
+    aspect-ratio: 1;
+    --c: no-repeat linear-gradient(var(--colorSecondary) 0 0);
+    background: 
+      var(--c) 0%   50%,
+      var(--c) 50%  50%,
+      var(--c) 100% 50%;
+    background-size: 20% 100%;
+    animation: l1 1s infinite linear;
+  }
+  @keyframes l1 {
+    0%  {background-size: 20% 100%,20% 100%,20% 100%}
+    33% {background-size: 20% 10% ,20% 100%,20% 100%}
+    50% {background-size: 20% 100%,20% 10% ,20% 100%}
+    66% {background-size: 20% 100%,20% 100%,20% 10% }
+    100%{background-size: 20% 100%,20% 100%,20% 100%}
+  }
+
+/* HTML: <div class="loader"></div> */
+/* .loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid var(--colorSecondary);
+    border-color: #000 #0000;
+    animation: l1 1s infinite;
+  }
+  @keyframes l1 {to{transform: rotate(.5turn)}} */
+
+/* HTML: <div class="loader"></div> */
+/* .loader {
+    width: 45px;
+    aspect-ratio: 1;
+    /* --c: conic-gradient(from -90deg,#000 90deg,#0000 0); */
+    /* --c: conic-gradient(from -90deg,#04B4E0 90deg,#0000 0); 
+    background: var(--c), var(--c);
+    background-size: 40% 40%;
+    animation: l20 1.5s infinite;
+  }
+  @keyframes l20 {
+   0%,
+   20%  {background-position: 0 0           ,0            calc(100%/3)}
+   33%  {background-position: 0 0           ,calc(100%/3) calc(100%/3)}
+   66%  {background-position: 0 calc(100%/3),calc(100%/3) 0  }
+   80%,
+   100% {background-position: 0 calc(100%/3),0            0  }
+  } */

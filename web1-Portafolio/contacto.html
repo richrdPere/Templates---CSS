@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="assets/css/reset.css"/>
     <link rel="stylesheet" href="assets/css/scroll.css"/>
     <link rel="stylesheet" href="assets/css/styles.css"/>
-    <link rel="stylesheet" href="assets/css/responsive.css"/>
+    <link rel="stylesheet" href="assets/css/loader.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <!--Javascript-->
+    <!--Javacript-->
+    <script src="assets/js/map.js" defer></script>
     <script src="assets/js/menu.js"></script>
+
 
     <title>Portafolio - Richard Pereira</title>
 
@@ -23,7 +26,7 @@
     <!--Layout Principal-->
     <div class="layout">
         <!--1.- Barra lateral (info Usuario)-->
-        <aside class="layout__aside layout__aside--visible">
+        <aside class="layout__aside">
             <section class="aside__userInfo">
 
                 <!--Informacion General-->
@@ -42,14 +45,14 @@
 
                         <!--1er Opcion - Principal-->
                         <li class="menu__option">
-                            <a href="index.html" class="menu__link menu__link--active">
+                            <a href="index.html" class="menu__link">
                                 <i class="menu__icon fa-solid fa-house"></i>
                                 <span class="menu__overlay">Home</span>
                             </a>
                         </li>
                         <!--2da Opcion - Sobre Mí-->
                         <li class="menu__option">
-                            <a href="sobreMi.html" class="menu__link ">
+                            <a href="sobreMi.html" class="menu__link">
                                 <i class="menu__icon fa-solid fa-user"></i>
                                 <span class="menu__overlay">Sobre mí</span>
                             </a>
@@ -64,7 +67,7 @@
                         <!--4ta Opcion - Portafolio-->
                         <li class="menu__option">
                             <a href="portafolio.html" class="menu__link">
-                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <i class="menu__icon fa-solid fa-briefcase "></i>
                                 <span class="menu__overlay">Portafolio</span>
                             </a>
                         </li>
@@ -77,7 +80,7 @@
                         </li>
                         <!--6ta Opcion - Contacto-->
                         <li class="menu__option">
-                            <a href="contacto.html" class="menu__link">
+                            <a href="contacto.html" class="menu__link menu__link--active">
                                 <i class="menu__icon fa-solid fa-envelope "></i>
                                 <span class="menu__overlay">Contacto</span>
                             </a>
@@ -125,12 +128,92 @@
             <i class="toggle__icon fa-solid fa-bars"></i>
             <i class="toggle__icon fa-solid fa-xmark"></i>
         </div>
-
+        
         <!--2.- Contenido Principal-->
         <main class="layout__content">
-            <section class="content__page">
-                <h1 class="page__name">Richard Pereira</h1>
-                <h2 class="page__job">Desarrollador web</h2>
+            <!--ESTE CONTENIDO CAMBIA EN TODAS LAS PAGINAS-->
+            <section class="content__page content__contact">
+
+                <header class="contact__header">
+                    <h1 class="contact__title">Contacto</h1>
+                </header>
+
+                <div class="contact__container">   
+                    <!--Lado izquierdo - Info-->
+                    <section class="contact__info">
+
+                        <!--1.- Ubicación-->
+                        <div class="contact__data">
+                            <i class="contact__icon fa-solid fa-location-dot"></i>
+                            <h2 class="contact__subtitle">Cusco</h2>
+                        </div>
+
+                        <!--2.- Teléfono-->
+                        <div class="contact__data">
+                            <i class="contact__icon fa-solid fa-phone"></i>
+                            <h2 class="contact__subtitle">986-302860</h2>
+                        </div>
+
+                        <!--3.-Correo-->
+                        <div class="contact__data">
+                            <i class="contact__icon fa-solid fa-envelope"></i>
+                            <h2 class="contact__subtitle">richrdpere321@gmail.com</h2>
+                        </div>
+
+                        <!--Profesion-->
+                        <div class="contact__data">
+                            <i class="contact__icon fa-solid fa-circle-check"></i>
+                            <h2 class="contact__subtitle">Desarrollador Freenlancer</h2>
+                        </div>
+                    </section>
+
+                    <!--Lado derecho - Formulario-->
+                    <section class="contact__formBox">
+                        <!--Mapa-->
+                        <div class="contact__map" id="IdLoadIframeMap">
+                            <div class="loader"></div>
+                        </div>
+
+                        <head class="contact__formHeader">
+                            <h3 class="formHeader__title">¿Cómo puedo <span class="title__color">Ayudarte?</span></h3>
+                        </head>
+
+                        <form class="contact__form" action="">
+                            <div class="form__container">
+                                <!--Form - lado izquierdo-->
+                                <section class="form__left">
+                                    <!--Nombre-->
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" name="name" placeholder="Nombre" required/>
+                                        <label for="name" class="form__label">Nombre</label>
+                                    </div>
+                                    <!--Email-->
+                                    <div class="form__group">
+                                        <input type="email" class="form__input" name="email" placeholder="Email" required/>
+                                        <label for="email" class="form__label">Email</label>
+                                    </div>
+                                    <!--Asunto-->
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" name="subject" placeholder="Subject" required/>
+                                        <label for="subject" class="form__label">Asunto</label>
+                                    </div>
+                                </section>
+                                <!--Form - lado derecho-->
+                                <section class="form__right">
+                                    <!--Mensaje-->
+                                    <div class="form__group form__group--textarea">
+                                        <textarea class="form__input form__input--textarea" name="message" placeholder="Mensaje" required></textarea>
+                                        <label for="message" class="form__label">Mensaje</label>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!--Form - boton-->
+                            <input type="submit" class="form__button" value="Enviar mensaje">
+
+                        </form>
+                    </section>
+                </div>    
             </section>
         </main>
     </div>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1"/>
+    
+    <!--Estilos-->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css"/>
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/css/scroll.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!--Javascript-->
+    <script src="assets/js/menu.js"></script>
+
+
+    <title>Portafolio - Richard Pereira</title>
+
+</head>
+<body>
+    
+    <!--Layout Principal-->
+    <div class="layout">
+        <!--1.- Barra lateral (info Usuario)-->
+        <aside class="layout__aside">
+            <section class="aside__userInfo">
+
+                <!--Informacion General-->
+                <div class="userInfo__general">
+                    <div class="userInfo__containerImagen">
+                        <img class="userInfo__imagen" src="assets/img/default-user.jpg" alt="Foto de Perfil del Usuario">
+                    </div>
+
+                    <h2 class="userInfo__name">Richard Pereira</h2>
+                    <h4 class="userInfo__job">Desarrollador web</h4>
+                </div>
+
+                <!--Menú de navegación-->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+
+                        <!--1er Opcion - Principal-->
+                        <li class="menu__option">
+                            <a href="index.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Home</span>
+                            </a>
+                        </li>
+                        <!--2da Opcion - Sobre Mí-->
+                        <li class="menu__option">
+                            <a href="sobreMi.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">Sobre mí</span>
+                            </a>
+                        </li>
+                        <!--3ra Opcion - Estudios-->
+                        <li class="menu__option">
+                            <a href="curriculum.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Curriculum</span>
+                            </a>
+                        </li>
+                        <!--4ta Opcion - Portafolio-->
+                        <li class="menu__option">
+                            <a href="portafolio.html" class="menu__link menu__link--active">
+                                <i class="menu__icon fa-solid fa-briefcase "></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
+                        <!--5ra Opcion - Bloq-->
+                        <li class="menu__option">
+                            <a href="bloq.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-book "></i>
+                                <span class="menu__overlay">Bloq</span>
+                            </a>
+                        </li>
+                        <!--6ta Opcion - Contacto-->
+                        <li class="menu__option">
+                            <a href="contacto.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-envelope "></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!--Links a redes sociales-->
+                <div class="userInfo__links">
+                    <ul class="links__social">
+                        
+                        <!-- Link a Youtube-->
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <!-- Link a Linkedin-->
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <!-- Link a Instagram-->
+                        <li class="social__option">
+                            <a href="#" class="social__link">
+                                <i class="social__icon fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Boton del curriculum-->
+                <div class="userInfo__buttons">
+                    <a href="#" class="userInfo__btn">Descargar CV</a>
+                </div>
+                <!--Pie de Pagina-->
+                <footer class="userInfo__footer">
+                    &copy; 2024 Richard Pereira WEB
+                </footer>
+            </section>
+        </aside>
+
+        <!--Menu responsive-->
+        <div class="layout__menuToggle">
+            <i class="toggle__icon fa-solid fa-bars"></i>
+            <i class="toggle__icon fa-solid fa-xmark"></i>
+        </div>
+        
+        <!--2.- Contenido Principal-->
+        <main class="layout__content">
+            <!--ESTE CONTENIDO CAMBIA EN TODAS LAS PAGINAS-->
+            <section class="content__page content__portfolio">
+                
+
+                <header class="portfolio__header">
+                    <h1 class="portfolio__title">Portafolio</h1>
+                </header>
+
+                <!--NAVEGACION DE HABILIDADES-->
+                <nav class="portfolio__navbar">
+                    <ul class="proftfolio__menu">
+                        <!--Opcion - Todos-->
+                        <li class="portfolio__option portfolio__option--active">
+                            <a href="#" class="portfolio__link">Todo</a>
+                        </li>
+                        <!--Opcion - Cursos-->
+                        <li class="portfolio__option">
+                            <a href="#" class="portfolio__link">Cursos</a>
+                        </li>
+                        <!--Opcion - Web-->
+                        <li class="portfolio__option">
+                            <a href="#" class="portfolio__link">Web</a>
+                        </li>
+                        <!--Opcion - Redes Sociales-->
+                        <li class="portfolio__option">
+                            <a href="#" class="portfolio__link">Redes Sociales</a>
+                        </li>
+                        <!--Opcion - Videos-->
+                        <li class="portfolio__option">
+                            <a href="#" class="portfolio__link">Videos</a>
+                        </li>
+                        <!--Opcion - Proyectos-->
+                        <li class="portfolio__option">
+                            <a href="#" class="portfolio__link">Proyectos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!--SECCION DE PROYECTOS-->
+                <section class="portfolio__gallery">
+
+                    <!--1er Figure-->
+                    <figure class="gallery__item">
+                        <!--Imagen-->
+                        <div class="gallery__containerImagen">
+                            <a href="#" class="gallery__link">
+                                <img class="gallery__image" src="assets/img/galeria-1.jpg" alt="1ra imagen de la galeria">
+                            </a>
+                        </div>
+                        <!--Titular-->
+                        <figcaption class="gallery__title">Producción de video</figcaption>
+                        <i class="gallery__icon fa-solid fa-video-camera"></i>
+                        <span class="gallery__category">Videos</span>
+                    </figure>
+
+                    <!--2da Figure-->
+                    <figure class="gallery__item">
+                        <!--Imagen-->
+                        <div class="gallery__containerImagen">
+                            <a href="#" class="gallery__link">
+                                <img class="gallery__image" src="assets/img/galeria-2.jpg" alt="1ra imagen de la galeria">
+                            </a>
+                        </div>
+                        <!--Titular-->
+                        <figcaption class="gallery__title">Master en Javascript</figcaption>
+                        <i class="gallery__icon fa-solid fa-code"></i>
+                        <span class="gallery__category">Cursos</span>
+                    </figure>
+
+                    <!--3ra Figure-->
+                    <figure class="gallery__item">
+                        <!--Imagen-->
+                        <div class="gallery__containerImagen">
+                            <a href="#" class="gallery__link">
+                                <img class="gallery__image" src="assets/img/galeria-3.jpg" alt="1ra imagen de la galeria">
+                            </a>
+                        </div>
+                        <!--Titular-->
+                        <figcaption class="gallery__title">Master en React</figcaption>
+                        <i class="gallery__icon fa-solid fa-code-commit"></i>
+                        <span class="gallery__category">Cursos</span>
+                    </figure>
+
+                    <!--4ta Figure-->
+                    <figure class="gallery__item">
+                        <!--Imagen-->
+                        <div class="gallery__containerImagen">
+                            <a href="#" class="gallery__link">
+                                <img class="gallery__image" src="assets/img/galeria-4.jpg" alt="1ra imagen de la galeria">
+                            </a>
+                        </div>
+                        <!--Titular-->
+                        <figcaption class="gallery__title">Red social tipo Twitter</figcaption>
+                        <i class="gallery__icon fa-solid fa-code"></i>
+                        <span class="gallery__category">Web</span>
+                    </figure>
+
+                    <!--5ta Figure-->
+                    <figure class="gallery__item">
+                        <!--Imagen-->
+                        <div class="gallery__containerImagen">
+                            <a href="#" class="gallery__link">
+                                <img class="gallery__image" src="assets/img/galeria-5.jpg" alt="1ra imagen de la galeria">
+                            </a>
+                        </div>
+                        <!--Titular-->
+                        <figcaption class="gallery__title">Master en Lógica de Programación</figcaption>
+                        <i class="gallery__icon fa-solid fa-code"></i>
+                        <span class="gallery__category">Cursos</span>
+                    </figure>
+
+                    <!--6ta Figure-->
+                    <figure class="gallery__item">
+                        <!--Imagen-->
+                        <div class="gallery__containerImagen">
+                            <a href="#" class="gallery__link">
+                                <img class="gallery__image" src="assets/img/galeria-6.jpg" alt="1ra imagen de la galeria">
+                            </a>
+                        </div>
+                        <!--Titular-->
+                        <figcaption class="gallery__title">Galeria de Imágenes</figcaption>
+                        <i class="gallery__icon fa-solid fa-image-portrait"></i>
+                        <span class="gallery__category">Proyectos</span>
+                    </figure>
+                </section>
+               
+                
+            </section>
+        </main>
+    </div>
+
+    
+
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1"/>
     
     <!--Estilos-->
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"/>
@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="assets/css/reset.css"/>
     <link rel="stylesheet" href="assets/css/scroll.css"/>
     <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!--Javascript-->
+    <script src="assets/js/menu.js"></script>
 
 
     <title>Portafolio - Richard Pereira</title>
@@ -53,8 +57,8 @@
                         </li>
                         <!--3ra Opcion - Estudios-->
                         <li class="menu__option">
-                            <a href="curriculum.html" class="menu__link">
-                                <i class="menu__icon fa-solid fa-graduation-cap menu__link--active"></i>
+                            <a href="curriculum.html" class="menu__link menu__link--active">
+                                <i class="menu__icon fa-solid fa-graduation-cap "></i>
                                 <span class="menu__overlay">Curriculum</span>
                             </a>
                         </li>
@@ -117,6 +121,13 @@
             </section>
         </aside>
 
+
+        <!--Menu responsive-->
+        <div class="layout__menuToggle">
+            <i class="toggle__icon fa-solid fa-bars"></i>
+            <i class="toggle__icon fa-solid fa-xmark"></i>
+        </div>
+        
         <!--2.- Contenido Principal-->
         <main class="layout__content">
             <section class="content__page content__resume">
@@ -126,6 +137,7 @@
                     <h1 class="resume__title">Curriculum</h1>
                 </header>
 
+                <!--HABILIDADES Y EXPERIENCIA-->
                 <div class="resume__container">
                     <!--Lado Izquierdo-->
                     <section class="resume__left">
@@ -136,7 +148,7 @@
 
                         <div class="resume__timelines">
                             <!--1er Instituto -->
-                            <article class="timelines__item">
+                            <article class="timelines__timeline">
                                 <header class="timeline__header">
                                     <h3 class="timeline__year">2024</h3>
                                     <span class="timeline__company">Henry</span>
@@ -144,7 +156,7 @@
 
                                 <div class="timeline__divider"></div>
 
-                                <div class="timeline__description">
+                                <div class="timeline__descriptions">
 
                                     <h3 class="timeline__title">Desarrollo Web FullStack</h3>
                                     <p class="timeline__description"> 
@@ -153,8 +165,9 @@
                                     </p>
                                 </div>
                             </article>
+                            
                             <!--2do Instituto -->
-                            <article class="timelines__item">
+                            <article class="timelines__timeline">
                                 <header class="timeline__header">
                                     <h3 class="timeline__year">2022</h3>
                                     <span class="timeline__company">Universidad Nacional San Antonio Abad del Cusco</span>
@@ -162,7 +175,7 @@
 
                                 <div class="timeline__divider"></div>
 
-                                <div class="timeline__description">
+                                <div class="timeline__descriptions">
 
                                     <h3 class="timeline__title">Edición de Video</h3>
                                     <p class="timeline__description"> 
@@ -180,7 +193,7 @@
 
                         <div class="resume__timelines">
                             <!--1er Trabajo -->
-                            <article class="timelines__item">
+                            <article class="timelines__timeline">
                                 <header class="timeline__header">
                                     <h3 class="timeline__year">2022 - 2023</h3>
                                     <span class="timeline__company">Google</span>
@@ -188,7 +201,7 @@
 
                                 <div class="timeline__divider"></div>
 
-                                <div class="timeline__description">
+                                <div class="timeline__descriptions">
 
                                     <h3 class="timeline__title">Desarrollo Web Senior</h3>
                                     <p class="timeline__description"> 
@@ -198,7 +211,7 @@
                                 </div>
                             </article>
                             <!--2do Trabajo -->
-                            <article class="timelines__item">
+                            <article class="timelines__timeline">
                                 <header class="timeline__header">
                                     <h3 class="timeline__year">2023 - 2024</h3>
                                     <span class="timeline__company">Youtube</span>
@@ -206,7 +219,7 @@
 
                                 <div class="timeline__divider"></div>
 
-                                <div class="timeline__description">
+                                <div class="timeline__descriptions">
 
                                     <h3 class="timeline__title">Edición de Video</h3>
                                     <p class="timeline__description"> 
@@ -216,7 +229,7 @@
                                 </div>
                             </article>
                             <!--3er Trabajo -->
-                            <article class="timelines__item">
+                            <article class="timelines__timeline">
                                 <header class="timeline__header">
                                     <h3 class="timeline__year">2024</h3>
                                     <span class="timeline__company">Google</span>
@@ -224,7 +237,7 @@
 
                                 <div class="timeline__divider"></div>
 
-                                <div class="timeline__description">
+                                <div class="timeline__descriptions">
 
                                     <h3 class="timeline__title">Desarrollador PHP</h3>
                                     <p class="timeline__description"> 
@@ -240,7 +253,7 @@
                     <section class="resume__right">
                         <!--1.-Diseño-->
                         <header class="resume__subheader">
-                            <h2 class="resume_subtitle">Habilidades de Diseño</h2>
+                            <h2 class="resume_subtitle">Habilidades de <span class="subtitle__color">Diseño</span></h2>
                         </header>
 
                         <div class="resume__skills">
@@ -251,7 +264,7 @@
                             </article>
 
                             <div class="skills__progressBar">
-                                <div class="skills__percentage"></div>
+                                <div class="skills__percentage skills_percentage--h1"></div>
                             </div>
                             <!--2da Habilidad-->
                             <article class="skills__title">
@@ -260,7 +273,7 @@
                             </article>
 
                             <div class="skills__progressBar">
-                                <div class="skills__percentage"></div>
+                                <div class="skills__percentage skills_percentage--h2"></div>
                             </div>
                             <!--3er Habilidad-->
                             <article class="skills__title">
@@ -269,7 +282,7 @@
                             </article>
 
                             <div class="skills__progressBar">
-                                <div class="skills__percentage"></div>
+                                <div class="skills__percentage skills_percentage--h3"></div>
                             </div>
                             <!--4ta Habilidad-->
                             <article class="skills__title">
@@ -278,13 +291,13 @@
                             </article>
 
                             <div class="skills__progressBar">
-                                <div class="skills__percentage"></div>
+                                <div class="skills__percentage skills_percentage--h4"></div>
                             </div>
                         </div>  
 
                         <!--2.-Código-->
                         <header class="resume__subheader">
-                            <h2 class="resume_subtitle">Habilidades de Código</h2>
+                            <h2 class="resume_subtitle">Habilidades de <span class="subtitle__color">Código</span></h2>
                         </header>
 
                         <div class="resume__skills">
@@ -295,7 +308,7 @@
                             </article>
 
                             <div class="skills__progressBar">
-                                <div class="skills__percentage"></div>
+                                <div class="skills__percentage skills_percentage--p1"></div>
                             </div>
                             <!--2da Conocimiento-->
                             <article class="skills__title">
@@ -304,7 +317,7 @@
                             </article>
 
                             <div class="skills__progressBar">
-                                <div class="skills__percentage"></div>
+                                <div class="skills__percentage skills_percentage--p2"></div>
                             </div>
                             <!--3er Conocimiento-->
                             <article class="skills__title">
@@ -313,7 +326,7 @@
                             </article>
 
                             <div class="skills__progressBar">
-                                <div class="skills__percentage"></div>
+                                <div class="skills__percentage skills_percentage--p3"></div>
                             </div>
                             <!--4ta Conocimiento-->
                             <article class="skills__title">
@@ -322,7 +335,7 @@
                             </article>
 
                             <div class="skills__progressBar">
-                                <div class="skills__percentage"></div>
+                                <div class="skills__percentage skills_percentage--p4"></div>
                             </div>
                             <!--5to Conocimiento-->
                             <article class="skills__title">
@@ -331,14 +344,41 @@
                             </article>
 
                             <div class="skills__progressBar">
-                                <div class="skills__percentage"></div>
+                                <div class="skills__percentage skills_percentage--p5"></div>
+                            </div>
+                            <!--6to Conocimiento-->
+                            <article class="skills__title">
+                                <h4 class="skills__text">MySQL</h4>
+                                <span class="skills__number">71%</span>
+                            </article>
+
+                            <div class="skills__progressBar">
+                                <div class="skills__percentage skills_percentage--p6"></div>
+                            </div>
+                            <!--7mo Conocimiento-->
+                            <article class="skills__title">
+                                <h4 class="skills__text">Spring</h4>
+                                <span class="skills__number">82%</span>
+                            </article>
+
+                            <div class="skills__progressBar">
+                                <div class="skills__percentage skills_percentage--p7"></div>
+                            </div>
+                            <!--7mo Conocimiento-->
+                            <article class="skills__title">
+                                <h4 class="skills__text">Angular</h4>
+                                <span class="skills__number">82%</span>
+                            </article>
+
+                            <div class="skills__progressBar">
+                                <div class="skills__percentage skills_percentage--p7"></div>
                             </div>
                             
                         </div>  
 
                         <!--3.-Areas de Conocimientos-->
                         <header class="resume__subheader">
-                            <h2 class="resume_subtitle">Areas de Conocimientos</h2>
+                            <h2 class="resume_subtitle">Areas de <span class="subtitle__color">Conocimientos</span></h2>
                         </header>
 
                         <div class="resume__knowledges">
@@ -356,6 +396,7 @@
                     </section>
                 </div>
 
+                <!--CERTIFICADOS-->
                 <div class="resume__certificates">
                     <header class="resume__subheader">
                         <h2 class="resume_subtitle">Certificados</h2>
